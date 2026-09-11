@@ -1,7 +1,7 @@
 {
   "name": "notfair",
   "version": "0.9.19",
-  "description": "Goal-driven, loop-powered marketing agents that crush your business goals 24/7 — on your own machine. Say 'cut CAC to $30' and a dedicated agent turns it into a server-verified metric, then moves the number check after check while you sleep. Rides your existing Claude Code or Codex login.",
+  "description": "Goal-driven, loop-powered marketing agents that crush your business goals 24/7 \u2014 on your own machine. Say 'cut CAC to $30' and a dedicated agent turns it into a server-verified metric, then moves the number check after check while you sleep. Rides your existing Claude Code or Codex login.",
   "license": "MIT",
   "bin": {
     "notfair": "bin/cli.mjs"
@@ -13,9 +13,9 @@
     "public/"
   ],
   "scripts": {
-    "dev": "next dev --turbopack -p 3326",
-    "build": "next build && node scripts/copy-standalone-assets.mjs",
-    "start": "next start",
+    "dev": "node init && next dev --turbopack -p 3326",
+    "build": "node init && next build && node scripts/copy-standalone-assets.mjs",
+    "start": "node init && next start",
     "cli": "node bin/cli.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
